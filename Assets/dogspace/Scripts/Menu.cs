@@ -14,6 +14,7 @@ public class Menu : MonoBehaviour {
 			}
 		}
 		if (headless) {
+			Debug.Log ("Headless server start");
 			BoltLauncher.StartServer (UdpKit.UdpEndPoint.Parse ("0.0.0.0:27000"));
 		}
 	}

@@ -10,8 +10,8 @@ public class ShipBehaviour : Bolt.EntityBehaviour<IShipState> {
 	private ConstantForce force;
 	private Vector3 forceVector;
 
-	public float maxRoll = 1.5f;
-	public float maxPitch = 1.5f;
+	public float maxRoll = 4f;
+	public float maxPitch = 4f;
 	public float maxThrottle = 25f;
 
 	public override void Detached() {
@@ -24,7 +24,7 @@ public class ShipBehaviour : Bolt.EntityBehaviour<IShipState> {
 	}
 
 	public override void Attached() {
-		state.ShipTransform.SetTransforms (transform);
+		state.Transform.SetTransforms (transform);
 		body = GetComponent<Rigidbody> ();
 		force = GetComponent<ConstantForce> ();
 	}

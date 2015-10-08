@@ -5,8 +5,8 @@ public class TrackingCamera : MonoBehaviour {
 	
 	public Vector3 distance = new Vector3(0f, 0.2f, 0.8f);
 	
-	public float positionDamping = 2f;
-	public float rotationDamping = 2f;
+	public float positionDamping = 6f;
+	public float rotationDamping = 6f;
 
 	private Transform target;
 	private Transform thisTransform;
